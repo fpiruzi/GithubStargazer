@@ -1,0 +1,47 @@
+PODS:
+  - Alamofire (4.8.1)
+  - AlamofireObjectMapper (5.2.0):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - Material (2.16.4):
+    - Material/Core (= 2.16.4)
+  - Material/Core (2.16.4):
+    - Motion (~> 1.4.3)
+  - MBProgressHUD (1.0.0)
+  - Motion (1.4.3):
+    - Motion/Core (= 1.4.3)
+  - Motion/Core (1.4.3)
+  - ObjectMapper (3.4.2)
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.6)
+  - AlamofireObjectMapper (~> 5.0)
+  - Material (~> 2.16.4)
+  - MBProgressHUD (~> 1.0.0)
+  - SDWebImage (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - Material
+    - MBProgressHUD
+    - Motion
+    - ObjectMapper
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
+  Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  Motion: 153ba49692997888556c7a95207278a8b1f8be95
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+
+PODFILE CHECKSUM: 8a3c131e52edad3caa2b5a66fdc5687ba48279b6
+
+COCOAPODS: 1.5.3
