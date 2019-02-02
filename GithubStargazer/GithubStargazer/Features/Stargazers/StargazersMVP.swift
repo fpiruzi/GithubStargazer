@@ -22,4 +22,5 @@ protocol StargazersPresenter{
     func numberOfSections() -> Int
     func numberOfRowsInSection(section: Int) -> Int
     func getObjectAt(index: IndexPath) -> StargazerViewModel
+    func loadNextPage()
 }

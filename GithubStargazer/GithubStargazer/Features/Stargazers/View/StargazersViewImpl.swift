@@ -66,8 +66,10 @@ extension StargazersViewImpl{
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.addInfiniteScrolling {
-            //presenter
+            self.presenter.loadNextPage()
+            self.tableView.infiniteScrollingView.stopAnimating()
         }
+        tableView.tableFooterView = UIView()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
@@ -89,7 +91,7 @@ extension StargazersViewImpl{
     
     fileprivate func stargazerCellAtIndexPath(indexPath: IndexPath)-> StargazerCell {
         let stargazer = self.presenter.getObjectAt(index: indexPath)
-        let cellIdentifier = "StargazerCell"
+        let cellIdentifier = Constants.CellIdentifiers.stargazerCell
         let cell = self.tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for:indexPath) as! StargazerCell
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         cell.setTitle(value: stargazer.title)

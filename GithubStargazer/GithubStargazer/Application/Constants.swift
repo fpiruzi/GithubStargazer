@@ -17,6 +17,7 @@ open class Constants{
         static let ok = "Ok"
         static let empty = ""
         static let serviceErrorMessage = "Invalid GitHub username or reponame, please retry again."
+        static let paginationErrorMessage = "Pagination error. Please retry."
         static let search = "Search"
         static let userPlaceholder = "Github username"
         static let repoPlaceholder = "Github repo name"
@@ -26,6 +27,10 @@ open class Constants{
     struct Images{
         static let githubIcon = "GitHub_Logo"
         static let placeholder = "placeholder"
+    }
+    
+    struct CellIdentifiers{
+        static let stargazerCell = "StargazerCell"
     }
     
     struct Networking {

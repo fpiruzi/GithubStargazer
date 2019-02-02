@@ -15,6 +15,7 @@ class StargazersPresenterImpl<T: StargazersView>:StargazersPresenter {
     weak var view : T?
     fileprivate let alamofire = AlamofireHandler()
     fileprivate var startgazers = [Stargazer]()
+    fileprivate var nextPageURL : String?
     
     required init(view: T) {
         self.view = view
@@ -38,10 +39,14 @@ class StargazersPresenterImpl<T: StargazersView>:StargazersPresenter {
     func numberOfRowsInSection(section: Int) -> Int {
         return self.startgazers.count
     }
+    
+    func loadNextPage(){
+        self.getNextPageData()
+    }
 }
 
 extension StargazersPresenterImpl{
-    //TODO: Pagination
+
     fileprivate func getStargazersFromAPI(username:String!, reponame:String!){
         self.view?.showLoading()
         
@@ -49,8 +54,8 @@ extension StargazersPresenterImpl{
         
         alamofire.request(Constants.Networking.baseURL, resourceUrl:resourceURL, method: .get, encoding: URLEncoding.default).validate().responseArray { [weak self](response: DataResponse<[Stargazer]>) in
             self?.view?.hideLoading()
-            print(response.response?.allHeaderFields["Link"])
             if response.result.isSuccess {
+                self?.nextPageURL = URLBuilder.sharedInstance.getNextPageUrl(allHeaders: response.response?.allHeaderFields)
                 if let stargazersArray = response.result.value {
                     self?.startgazers = stargazersArray
 
@@ -66,6 +71,28 @@ extension StargazersPresenterImpl{
                 //error
                 self?.view?.hideTableView()
                 self?.view?.showMessage(message: Constants.Strings.serviceErrorMessage)
+            }
+        }
+    }
+    //Pagination
+    fileprivate func getNextPageData(){
+        
+        if let pageUrl = self.nextPageURL{
+            
+            self.view?.showLoading()
+            
+            alamofire.request(pageUrl, method: .get, encoding: URLEncoding.default).validate().responseArray { [weak self](response: DataResponse<[Stargazer]>) in
+                self?.view?.hideLoading()
+                if response.result.isSuccess {
+                    self?.nextPageURL = URLBuilder.sharedInstance.getNextPageUrl(allHeaders: response.response?.allHeaderFields)
+                    if let stargazersArray = response.result.value {
+                        self?.startgazers.append(contentsOf: stargazersArray)
+                        self?.view?.reloadData()
+                    }
+                }else{
+                    //error
+                    self?.view?.showMessage(message: Constants.Strings.paginationErrorMessage)
+                }
             }
         }
     }
