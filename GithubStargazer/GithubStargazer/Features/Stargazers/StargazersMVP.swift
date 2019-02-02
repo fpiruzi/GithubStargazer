@@ -9,9 +9,17 @@
 import Foundation
 
 protocol StargazersView: class {
-
+    func showLoading()
+    func hideLoading()
+    func reloadData()
+    func hideTableView()
+    func showTableView()
+    func showMessage(message: String)
 }
 
 protocol StargazersPresenter{
-
+    func getData(username:String?, reponame:String?)
+    func numberOfSections() -> Int
+    func numberOfRowsInSection(section: Int) -> Int
+    func getObjectAt(index: IndexPath) -> StargazerViewModel
 }

@@ -15,6 +15,7 @@ PODS:
   - SDWebImage (4.4.3):
     - SDWebImage/Core (= 4.4.3)
   - SDWebImage/Core (4.4.3)
+  - SVPullToRefresh (0.4.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.6)
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - Material (~> 2.16.4)
   - MBProgressHUD (~> 1.0.0)
   - SDWebImage (~> 4.0)
+  - SVPullToRefresh
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -32,6 +34,7 @@ SPEC REPOS:
     - Motion
     - ObjectMapper
     - SDWebImage
+    - SVPullToRefresh
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -41,7 +44,8 @@ SPEC CHECKSUMS:
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
 
-PODFILE CHECKSUM: 8a3c131e52edad3caa2b5a66fdc5687ba48279b6
+PODFILE CHECKSUM: ee61a5af040d445d91a08e69e62212c4a4e235da
 
 COCOAPODS: 1.5.3

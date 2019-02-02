@@ -10,13 +10,11 @@ import Foundation
 import MBProgressHUD
 
 class UIHelper{
-    
     static let sharedInstance = UIHelper()
 }
 
 //ProgressHUD
 extension UIHelper{
-    
     func showHUDInView(view: UIView){
         MBProgressHUD.showAdded(to: view, animated: true)
     }
@@ -28,7 +26,6 @@ extension UIHelper{
 
 //Alert controller
 extension UIHelper{
-    
     func showAlertWithOkButton(viewController:UIViewController, title:String, message:String){
         let alertController = UIAlertController(
             title: title,
@@ -42,13 +39,5 @@ extension UIHelper{
             )
         )
         viewController.present(alertController, animated: true, completion: nil)
-    }
-
-    func showServiceError(viewController:UIViewController){
-        self.showAlertWithOkButton(
-            viewController: viewController,
-            title: Constants.Strings.warning,
-            message: Constants.Strings.serviceErrorMessage
-        )
     }
 }

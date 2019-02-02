@@ -11,18 +11,21 @@ import Foundation
 open class Constants{
     
     struct Strings {
+        static let stargazers = "Stargazers"
         static let warning = "Warning"
         static let emptyList = "There are not stargazers for this repo"
         static let ok = "Ok"
         static let empty = ""
-        static let serviceErrorMessage = "Please retry again"
+        static let serviceErrorMessage = "Invalid GitHub username or reponame, please retry again."
         static let search = "Search"
         static let userPlaceholder = "Github username"
         static let repoPlaceholder = "Github repo name"
+        static let invalidStrings = "The username or reponame are empty, please provide a valid value."
     }
     
     struct Images{
         static let githubIcon = "GitHub_Logo"
+        static let placeholder = "placeholder"
     }
     
     struct Networking {

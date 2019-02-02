@@ -11,6 +11,7 @@ target 'GithubStargazer' do
   pod 'SDWebImage', '~> 4.0'
   pod 'AlamofireObjectMapper', '~> 5.0'
   pod 'Material', '~> 2.16.4'
+  pod 'SVPullToRefresh'
 
   target 'GithubStargazerTests' do
     inherit! :search_paths
