@@ -11,6 +11,8 @@
 		3D053B682206170D00529233 /* StringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D053B672206170D00529233 /* StringValidator.swift */; };
 		3D053B6A22061E6900529233 /* StargazerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D053B6922061E6900529233 /* StargazerCell.swift */; };
 		3D053B6C2206286C00529233 /* StargazerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D053B6B2206286C00529233 /* StargazerViewModel.swift */; };
+		3D3505C22206548900F3218C /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D053B652206098900529233 /* URLBuilder.swift */; };
+		3D3505C32206554F00F3218C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3D91B2204E3EB00D98A49 /* Constants.swift */; };
 		3DA3D8F82204E22E00D98A49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3D8F72204E22E00D98A49 /* AppDelegate.swift */; };
 		3DA3D8FD2204E22E00D98A49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA3D8FB2204E22E00D98A49 /* Main.storyboard */; };
 		3DA3D8FF2204E23000D98A49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DA3D8FE2204E23000D98A49 /* Assets.xcassets */; };
@@ -417,6 +419,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DA3D90D2204E23000D98A49 /* GithubStargazerTests.swift in Sources */,
+				3D3505C22206548900F3218C /* URLBuilder.swift in Sources */,
+				3D3505C32206554F00F3218C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,25 +10,47 @@ import XCTest
 @testable import GithubStargazer
 
 class GithubStargazerTests: XCTestCase {
+    
+    var urlBuilder: URLBuilder!
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        urlBuilder = URLBuilder.sharedInstance
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        urlBuilder = nil
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testBuildSuccessStargazerResourceURL(){
+        XCTAssertEqual(
+            urlBuilder.buildStargazerResourceURL(
+                username: Constants.Testing.usernameFpiruzi,
+                reponame: Constants.Testing.reponameSimpleCalc
+            ),
+            Constants.Testing.exampleFpiruziResourceURL
+        )
+        
+        XCTAssertEqual(
+            urlBuilder.buildStargazerResourceURL(
+                username: Constants.Testing.usernameFlutter,
+                reponame: Constants.Testing.reponameSamples
+            ),
+            Constants.Testing.exampleFlutterResourceURL
+        )
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testValidStringExtension(){
+        XCTAssertEqual(
+            Constants.Strings.empty.isValid(),
+            false
+        )
+        
+        XCTAssertEqual(
+            Constants.Testing.usernameFpiruzi.isValid(),
+            true
+        )
     }
 
 }

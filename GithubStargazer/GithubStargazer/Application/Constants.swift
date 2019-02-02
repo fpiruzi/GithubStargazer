@@ -49,4 +49,13 @@ open class Constants{
             }
         }
     }
+    
+    struct Testing {
+        static let exampleFpiruziResourceURL = "/repos/fpiruzi/simpleCalculator/stargazers"
+        static let exampleFlutterResourceURL = "/repos/flutter/samples/stargazers"
+        static let usernameFpiruzi = "fpiruzi"
+        static let reponameSimpleCalc = "simpleCalculator"
+        static let usernameFlutter = "flutter"
+        static let reponameSamples = "samples"
+    }
 }
