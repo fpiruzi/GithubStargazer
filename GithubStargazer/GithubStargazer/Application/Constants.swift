@@ -57,5 +57,16 @@ open class Constants{
         static let reponameSimpleCalc = "simpleCalculator"
         static let usernameFlutter = "flutter"
         static let reponameSamples = "samples"
+        static let reponameInvalid = "INVALID*REPO*NAME"
+        static let validPaginationRepoURL = "https://api.github.com/repositories/136667574/stargazers?page=2"
+        
+        struct Models{
+            struct StargazerExample {
+                static let login = "nikolay"
+                static let id = Int64(2882)
+                static let avatarUrl = "https://avatars2.githubusercontent.com/u/2882?v=4"
+                static let htmlUrl = "https://github.com/nikolay"
+            }
+        }
     }
 }
